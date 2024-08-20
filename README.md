@@ -3,11 +3,11 @@
 A collection of applications migrated from PostgreSQL to YugabyteDB.
 
 ## Prerequisites
-
-1. Install [PostgreSQL](https://www.postgresql.org/download) or [run in Docker](https://hub.docker.com/_/postgres).
-2. Install [YugabyteDB](https://docs.yugabyte.com/preview/quick-start/).
+1. Fork this repository.
+2. Install [PostgreSQL](https://www.postgresql.org/download) or [run in Docker](https://hub.docker.com/_/postgres).
+3. Install [YugabyteDB](https://docs.yugabyte.com/preview/quick-start/).
    **NOTE: Be sure to run YugabyteDB with the `--enable_pg_parity_tech_preview` flag**
-3. Install [YugabyteDB Voyager](https://docs.yugabyte.com/preview/yugabyte-voyager/install-yb-voyager/).
+4. Install [YugabyteDB Voyager](https://docs.yugabyte.com/preview/yugabyte-voyager/install-yb-voyager/).
 
 ## Migration Steps
 
@@ -33,6 +33,7 @@ Use the `yb-voyager` CLI to [perform an offline migration](https://docs.yugabyte
 
 1. Fill out application instructions in `/apps/APP_NAME.md`
 2. Mark the application migration status in the table below as DONE.
+3. Issue a pull request to contribute to this project.
 
 |     | Name                | Description                                                                                                                                                                                        | GitHub                                                                                                                                                                                    | Instructions                                     | Status |
 | --- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------ |
