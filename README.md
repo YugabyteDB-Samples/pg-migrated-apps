@@ -3,6 +3,7 @@
 A collection of applications migrated from PostgreSQL to YugabyteDB.
 
 ## Prerequisites
+
 1. Fork this repository.
 2. Install [PostgreSQL](https://www.postgresql.org/download) or [run in Docker](https://hub.docker.com/_/postgres).
 3. Install [YugabyteDB](https://docs.yugabyte.com/preview/quick-start/).
@@ -25,9 +26,10 @@ Use the `yb-voyager` CLI to [perform an offline migration](https://docs.yugabyte
 
 1. Generate and view migration assessment report.
 2. Export the schema and data from PostgreSQL.
-3. Import the schema and data to YugabyteDB.
-4. Verify the migration was successful by running queries to check row counts.
-5. Run the application on YugabyteDB.
+3. Perform schema analysis and review report.
+4. Import the schema and data to YugabyteDB.
+5. Verify the migration was successful by running queries to check row counts.
+6. Run the application on YugabyteDB.
 
 ### After Migration
 
@@ -83,7 +85,7 @@ Use the `yb-voyager` CLI to [perform an offline migration](https://docs.yugabyte
 | 44  | GitLab              |                                                                                                                                                                                                    | <a href=""> <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="30" height="30"> </a>                                                | [Run on YugabyteDB](apps/GitLab.md)              |        |
 | 45  | Stansoft            |                                                                                                                                                                                                    | <a href=""> <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="30" height="30"> </a>                                                | [Run on YugabyteDB](apps/Stansoft.md)            |        |
 | 46  | Orthance            | free and open-source, lightweight DICOM server for medical imaging from Belgium.                                                                                                                   | <a href="https://www.orthanc-server.com/download.php"> <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="30" height="30"> </a>     | [Run on YugabyteDB](apps/Orthance.md)            |        |
-| 47  | NodeBB              | Node.js based forum software built for the modern web                                                                                                                                              | <a href="https://github.com/NodeBB/NodeBB"> <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="30" height="30"> </a>                | [Run on YugabyteDB](apps/NodeBB.md)              |        |
+| 47  | NodeBB              | Node.js based forum software built for the modern web                                                                                                                                              | <a href="https://github.com/NodeBB/NodeBB"> <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="30" height="30"> </a>                | [Run on YugabyteDB](apps/NodeBB.md)              | DONE   |
 | 48  | Evershop            | NodeJS E-commerce Platform                                                                                                                                                                         | <a href="https://github.com/evershopcommerce/evershop"> <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="30" height="30"> </a>    | [Run on YugabyteDB](apps/Evershop.md)            |        |
 | 49  | Servicebot          | Open-source subscription management & billing automation system                                                                                                                                    | <a href="https://github.com/service-bot/servicebot"> <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="30" height="30"> </a>       | [Run on YugabyteDB](apps/Servicebot.md)          |        |
 | 50  | Miaou               | A chat server with OAuth2 authentication, persistent and searchable history, video and audio, markdown formatting, private and public rooms, stars, votes, embedded games, and many other features | <a href="https://github.com/Canop/miaou"> <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="30" height="30"> </a>                  | [Run on YugabyteDB](apps/Miaou.md)               |        |
