@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "csv-parser": "^3.0.0",
+    "csv-stringify": "^6.5.1",
+    "minimist": "^1.2.8",
+    "pg": "^8.12.0"
+  }
+}

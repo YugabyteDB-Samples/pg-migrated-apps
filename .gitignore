@@ -1,6 +1,2 @@
 node_modules/
-package.json
-package-lock.json
-generate_formatted_csv.js
-generate_readme_files.js
 *.csv
