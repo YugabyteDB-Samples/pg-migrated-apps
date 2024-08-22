@@ -81,7 +81,8 @@ docker stop pg
 
 ```
 
-## Start the application with new database endpoint ( host:`yb`, port: `5433` )
+## Start the application with new database endpoint
+Ame command as before, but with host: `yb` and port: `5433`
 
 ```
 
