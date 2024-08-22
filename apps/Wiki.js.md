@@ -4,7 +4,9 @@ A modern and powerful wiki app built on Node.js
 
 [GitHub](https://github.com/requarks/wiki)
 
-Start PostgreSQL:
+# Migration
+
+## Start PostgreSQL:
 ```
 
 docker run -d --name pg \
@@ -12,10 +14,9 @@ docker run -d --name pg \
  --health-cmd="PGPASSWORD=password pg_isready -h pg -p 5432 -U user -d db" --health-interval=3s --health-timeout=3s \
  postgres:12
 
-
 ```
 
-Start the application:
+## Start the application:
 ```
 
 docker run -d --name app --link pg:pg \
@@ -25,18 +26,20 @@ docker run -d --name app --link pg:pg \
 
 ```
 
-Test the application: http://localhost:3000
+## Test the application:
+Use the application on http://localhost:3000
 
-Stop the application (remove the container - if there were some persitent files, put them in external volume):
+![image](https://github.com/user-attachments/assets/a231ca40-cffb-42c6-a53f-2d0adb598bb5)
+
+## Stop the application
+(remove the container - if there were some persitent files, put them in external volume):
 ```
 
 docker rm app
 
-
 ```
 
-
-Start YugabyteDB
+## Start YugabyteDB
 
 ```
 
@@ -48,7 +51,8 @@ docker run -d --name yb  \
 
 ```
 
-Start a container with the YugabyteDB voyager image
+## Migrate with YugabyteDB Voyager
+Start a container with the YugabyteDB voyager image and run the migration steps
 
 ```
 
@@ -68,7 +72,7 @@ PGPASSWORD=password psql -h yb -p 5433 -U user -c 'analyze' db
  
 ```
 
-Stop PostgreSQL
+## Stop PostgreSQL
 
 ```
 
@@ -77,7 +81,7 @@ docker stop pg
 
 ```
 
-Start the application with new database endpoint ( host:`yb`, port: `5433` )
+## Start the application with new database endpoint ( host:`yb`, port: `5433` )
 
 ```
 
@@ -90,5 +94,9 @@ docker run -d --name app --link yb:yb \
 
 ```
 
-Validate the application
+## Validate the application:
+Verify you get the same state on http://localhost:3000
+
+![image](https://github.com/user-attachments/assets/5965e267-f335-4209-8cb3-f1443707fd1d)
+
 
