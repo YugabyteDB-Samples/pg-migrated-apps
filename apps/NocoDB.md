@@ -33,7 +33,7 @@ docker run -d --name app --link pg:pg \
 
 Use the application to create some tables
 
-```
+![image](https://github.com/user-attachments/assets/77a81dbc-6c4e-4377-887c-3925455a4f2f)
 
 ## Stop the application
 (remove the container - if there were some persitent files, put them in external volume):
@@ -106,6 +106,9 @@ docker run -d --name app --link yb:yb \
 ## Validate the application:
 
 Verify your table is still there
+
+![image](https://github.com/user-attachments/assets/c428f7db-a3fb-4480-ad06-131180c2d0c9)
+
 
 ## remove PostgreSQL container
 ```
