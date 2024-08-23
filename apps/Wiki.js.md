@@ -35,7 +35,8 @@ Use the application on http://localhost:3000
 (remove the container - if there were some persitent files, put them in external volume):
 ```
 
-docker rm app
+docker stop app
+docker rm   app
 
 ```
 
@@ -44,8 +45,8 @@ docker rm app
 ```
 
 docker run -d --name yb  \
- --hostname db -e YSQL_DB=db -e YSQL_USER=user -e YSQL_PASSWORD=password \
- --health-cmd="PGPASSWORD=password postgres/bin/pg_isready -h db -p 5433 -U user -d db" --health-interval=3s --health-timeout=3s \
+ --hostname yb -e YSQL_DB=db -e YSQL_USER=user -e YSQL_PASSWORD=password \
+ --health-cmd="PGPASSWORD=password postgres/bin/pg_isready -h yb -p 5433 -U user -d db" --health-interval=3s --health-timeout=3s \
  yugabytedb/yugabyte:2024.1.1.0-b137 \
  bash -c 'rm -rf /tmp/.yb.* ; yugabyted start --enable_pg_parity_tech_preview --background=false --tserver_flags=ysql_colocate_database_by_default=true'
 
@@ -86,8 +87,6 @@ Ame command as before, but with host: `yb` and port: `5433`
 
 ```
 
-docker rm app
-
 docker run -d --name app --link yb:yb \
  -p 3000:3000 \
  -e DB_TYPE=postgres -e DB_HOST=yb -e DB_PORT=5433 -e DB_USER=user -e DB_PASS=password -e DB_NAME=db \
@@ -99,5 +98,15 @@ docker run -d --name app --link yb:yb \
 Verify you get the same state on http://localhost:3000
 
 ![image](https://github.com/user-attachments/assets/5965e267-f335-4209-8cb3-f1443707fd1d)
+
+
+## remove PostgreSQL container
+```
+
+docker rm pg
+
+```
+
+Remains two containers: `app` with the application, and `yb` with yugabyted
 
 
