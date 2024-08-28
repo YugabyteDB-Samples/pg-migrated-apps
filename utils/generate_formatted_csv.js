@@ -42,7 +42,8 @@ fs.createReadStream(inputFilePath)
         /[/\n ]/g,
         "-"
       )}.md)`,
-      Status: row["Migration Status"] || "         ",
+      Status:
+        row["Migration Status"] || row["Migrated from PG to YB"] || "         ",
       Contributor:
         (row["Owner GitHub Handle"] &&
           `[@${row["Owner GitHub Handle"]}](https://github.com/${row["Owner GitHub Handle"]})`) ||
