@@ -13,6 +13,7 @@ wget -O docker-compose.yml https://raw.githubusercontent.com/temporalio/docker-c
 
 docker compose up -d
 
+```
 ## Test the application:
 
 Use the application on http://localhost:18080/
@@ -67,6 +68,8 @@ yb-voyager export data      --export-dir /var/tmp --start-clean=true --source-db
 yb-voyager import data      --export-dir /var/tmp                    --target-db-host yb --target-db-user temporal --target-db-password temporal --target-db-name temporal
 PGPASSWORD=temporal psql -h yb -p 5433 -U temporal -c 'analyze' temporal
 '
+
+```
 
 YugabyteDB Voyager shows wrong errors about `ALTER TABLE CLUSTER not supported yet.`
 
