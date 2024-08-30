@@ -39,6 +39,9 @@ Upload some DICOM files.
 You can get some 💀 from in https://medimodel.com/wp-content/uploads/2021/03/2_skull_ct.zip 
 (upload the DICOM directory)
 
+![image](https://github.com/user-attachments/assets/a3755267-fcea-4c02-a83b-a629512cd599)
+
+
 ## Stop the application
 ```
 
@@ -107,8 +110,10 @@ docker compose start orthanc
 
 docker compose logs orthanc
 
-It fails with:
 ```
+
+It fails with:
+
 ```
 postgresql-orthanc-1  | W0830 20:27:45.380556             MAIN PluginsManager.cpp:158] An SQL transaction failed and
 will likely be retried: ERROR:  advisory locks are not yet implemented
