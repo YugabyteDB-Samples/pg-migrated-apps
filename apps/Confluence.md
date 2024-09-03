@@ -214,6 +214,7 @@ The last step is to recreate the Confluence container by switching it to Yugabyt
     ```
 
 Go to the page that you created on Postgres and confirm you can see and edit it!
+<img width="1490" alt="final_yb" src="https://github.com/user-attachments/assets/31b99be3-288c-4bd2-b5af-3a41484f8e10">
 
 **Hint**: you might want to use the [colocation feature](https://docs.yugabyte.com/preview/explore/colocation/) of YugabyteDB to match the performance of a single-server Postgres instance. That capability is instrumental for tables that don't require distribution.
 
