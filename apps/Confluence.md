@@ -1,6 +1,6 @@
 # Confluence
 
-A collaborative platform used for creating, sharing, and organizing content within teams and organizations. Built by Atlassian, the same company who built JIRA.
+A collaborative platform used for creating, sharing, and organizing content within teams and organizations. Built by Atlassian, the same company that built JIRA.
 
 [Official Website](https://www.atlassian.com/software/confluence)
 
@@ -48,18 +48,18 @@ Once the Confluence server has started, complete its setup:
 
 * Go to [http://localhost:8090](http://localhost:8090)
 
-* Create and provide an evalution key, or use your existing license
-    Picture TBD
+* Create and provide an evaluation key, or use your existing license
+<img width="802" alt="evaluation-key" src="https://github.com/user-attachments/assets/1b6c4a06-09d8-4849-96ef-99263751f2db">
 
 * Start a non-clustered instance of the server. It can take several minutes to complete the setup.
-    Picture TBD
+<img width="801" alt="non-clustered" src="https://github.com/user-attachments/assets/cc0023f2-c22a-443d-bb1d-d0ac1fe6a1a4">
 
 * Load an example site by clicking the "Example Site" button
-    Picture TBD
+<img width="809" alt="example-site" src="https://github.com/user-attachments/assets/c7853a64-1f77-4906-9fe7-0c73ce2c2002">
 
 * Finally, create an admin account.
-    Picture TBD
+<img width="810" alt="admin-account" src="https://github.com/user-attachments/assets/f0664fa7-e322-437d-a6a5-c2656a5de960">
 
 Once Confluence is fully configured, create a sample page like the one below and get ready for the migration to YugabyteDB:
+<img width="1493" alt="sample-page" src="https://github.com/user-attachments/assets/07a8415a-ef74-49ab-930b-9afd0d5ac6a5">
 
-Picture TBD
