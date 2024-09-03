@@ -78,7 +78,7 @@ cat /var/tmp/assessment/reports/assessmentReport.json
 yb-voyager export schema    --export-dir /var/tmp --start-clean=true --source-db-host pg --source-db-user wordpress --source-db-password supersecretpassword --source-db-name wordpress --source-db-schema public --source-db-type postgresql
 yb-voyager analyze-schema   --export-dir /var/tmp
 cat /var/tmp/reports/schema_analysis_report.txt
-sed -e 's/CREATE INDEX /CREATE INDEX NONCONCURRENTLY/' /var/tmp/schema/tables/INDEXES_table.sql
+sed -e "s/CREATE INDEX /CREATE INDEX NONCONCURRENTLY /" /var/tmp/schema/tables/INDEXES_table.sql
 yb-voyager import schema    --export-dir /var/tmp                    --target-db-host yb --target-db-user wordpress --target-db-password supersecretpassword --target-db-name wordpress --target-db-schema public --target-db-port=5432
 yb-voyager export data      --export-dir /var/tmp --start-clean=true --source-db-host pg --source-db-user wordpress --source-db-password supersecretpassword --source-db-name wordpress --source-db-schema public --source-db-type postgresql
 yb-voyager import data      --export-dir /var/tmp                    --target-db-host yb --target-db-user wordpress --target-db-password supersecretpassword --target-db-name wordpress --target-db-port=5432
