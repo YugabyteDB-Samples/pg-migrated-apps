@@ -31,6 +31,8 @@ docker-compose exec php-fpm wp --allow-root core install --url=http://wordpress.
 
 Use the application on http://localhost:80/wp-admin ( user `root` password `secret` )
 
+![image](https://github.com/user-attachments/assets/a3a0e0e0-20fc-4916-b20a-4ed0ae53fe5b)
+
 ## Stop the application
 ```
 
@@ -40,7 +42,7 @@ docker compose stop php-fpm
 
 ## Start YugabyteDB
 
-Add YugabyteDB service to docker-compose.yml:
+Add YugabyteDB service to `docker-compose.yml`:
 ```
 
   yb:
