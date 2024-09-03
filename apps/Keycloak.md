@@ -23,6 +23,8 @@ docker run -d \
   -p 5432:5432 \
   postgres:12
 
+! while ! docker exec -it postgres pg_isready -U ${POSTGRES_USER}; do sleep 1; done
+
 docker run -d \
   --name keycloak \
   --network keycloak_network \
