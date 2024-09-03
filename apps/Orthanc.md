@@ -121,3 +121,6 @@ postgresql-orthanc-1  | HINT:  See https://github.com/yugabyte/yugabyte-db/issue
 ```
 
 Note the config file (`/tmp/orthanc.json`) already has `"Lock": false` ([doc](https://orthanc.uclouvain.be/book/plugins/postgresql.html#locking))
+
+As the advisory lock prevents multiple Orthanc instances on the same database, it is safe to add `ysql_suppress_unsupported_error=true` in the `tserver_flags` comma-separated list. 
+
