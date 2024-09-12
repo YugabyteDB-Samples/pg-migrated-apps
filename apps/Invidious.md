@@ -4,7 +4,7 @@ An alternative front-end to YouTube
 
 [GitHub](https://github.com/iv-org/invidious)
 
-1. Clone the [repository]().
+1. Clone the [repository](https://github.com/iv-org/invidious).
 2. Edit the `docker-compose.yml` file per the [installation instructions](https://docs.invidious.io/installation/#docker).
 3. From the root directory, execute `docker-compose up` to start the application and PostgreSQL database.
 4. Generate data for the application.
@@ -18,6 +18,7 @@ docker run -d --name yugabyte -p7000:7000 -p9000:9000 -p15433:15433 -p5433:5433 
 ```
 
 6. Execute offline migration.
+   _Note: Remove UNLOGGED from table definition_
 7. Create `docker-compose-yb.yml` file and point to YugabyteDB instance.
    ```
    ...
@@ -34,26 +35,26 @@ _NOTE: In its original form, this function dynamically queries the database and 
 
 ```
 def insert(video : ChannelVideo, with_premiere_timestamp : Bool = false) : Bool
-    if with_premiere_timestamp
-      last_items = "premiere_timestamp = $9, views = $10"
-    else
-      last_items = "views = $10"
-    end
-
-    request = <<-SQL
-      INSERT INTO channel_videos
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
-      ON CONFLICT (id) DO UPDATE
-      SET title = $2, published = $3, updated = $4, ucid = $5,
-          author = $6, length_seconds = $7, live_now = $8, #{last_items}
-      RETURNING id
-    SQL
-
-    # If a row is returned, the operation was successful
-    result = PG_DB.query_one?(request, *video.to_tuple, as: String?)
-
-    return result.not_nil?
+  if with_premiere_timestamp
+    last_items = "premiere_timestamp = $9, views = $10"
+  else
+    last_items = "views = $10"
   end
+
+  request = <<-SQL
+    INSERT INTO channel_videos
+    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+    ON CONFLICT (id) DO UPDATE
+    SET title = $2, published = $3, updated = $4, ucid = $5,
+        author = $6, length_seconds = $7, live_now = $8, #{last_items}
+    RETURNING id
+  SQL
+
+  # If a row is returned, the operation was successful
+  result = PG_DB.query_one?(request, *video.to_tuple, as: String?)
+
+  return result.not_nil?
+end
 ```
 
 1. Build Docker image from root directory.
