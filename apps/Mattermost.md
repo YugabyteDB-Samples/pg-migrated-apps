@@ -171,9 +171,7 @@ select max_time,mean_time,min_time,calls,substr(query,1,80) from pg_stat_stateme
 ![image](https://github.com/user-attachments/assets/0dba8cab-3fde-4898-94b1-2b5f3a71ea18)
 
 
-With the postgres-parity mode, YugabyteDB should perform similarly to PostgreSQL (using Cost Based Optimizer and Range Sharding), but some indexes can be optimized. 
-
-drop index idx_posts_create_at; drop index idx_posts_delete_at;
+With the postgres-parity mode, YugabyteDB should perform similarly to PostgreSQL (using Cost Based Optimizer and Range Sharding)
 
 ## remove PostgreSQL container
 ```
