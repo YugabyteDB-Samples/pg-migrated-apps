@@ -250,7 +250,9 @@ docker-compose down plume
 docker-compose up -d plume --no-deps
 ```
 
-- validate the migration by logging into the app 
+- validate the migration by logging into the app(check previously created blogs)
+
+- create new blog "Migrated to Yugabyte using yb-voyager"
 
 - end migration
 ```sh
