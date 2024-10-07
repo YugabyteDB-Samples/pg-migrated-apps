@@ -50,7 +50,7 @@ readme()
 - Execute the nodejs app
 
 ```sh
-node testapp2.js
+node testapp.js
 ```
 
 ### For Postgresql
