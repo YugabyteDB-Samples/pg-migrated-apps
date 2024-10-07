@@ -103,6 +103,9 @@ docker-compose up -d plume
 - Plume is accessible at http://localhost:7878/
 
 - Login to plume and create some blogs for data.
+<img width="1727" alt="Screenshot 2024-10-07 at 11 50 07 AM" src="https://github.com/user-attachments/assets/f0f43fed-c325-4034-8ded-bddf230946d7">
+<img width="1725" alt="Screenshot 2024-10-07 at 11 50 31 AM" src="https://github.com/user-attachments/assets/4a3ae737-42f5-4c16-a2e2-abab0ebb7b02">
+
 
 
 ## Migrating to yugabyte
@@ -253,6 +256,8 @@ docker-compose up -d plume --no-deps
 - validate the migration by logging into the app(check previously created blogs)
 
 - create new blog "Migrated to Yugabyte using yb-voyager"
+<img width="1717" alt="Screenshot 2024-10-07 at 12 29 30 PM" src="https://github.com/user-attachments/assets/8a373674-a19e-43b7-895c-34ab59501325">
+
 
 - end migration
 ```sh
