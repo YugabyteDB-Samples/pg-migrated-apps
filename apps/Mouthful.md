@@ -401,3 +401,11 @@ docker-compose down postgres
 ```
 
 ## Congratulations! You have successfully migrated Mouthful app from PG to YB
+
+### Tools and versions
+- YugabyteDB docker image ```yugabytedb/yugabyte:2.23.0.0-b710```
+- Yugabyte Voyager docker image ```yugabytedb/yb-voyager:1.8.2```
+- postgres docker image ```postgres:13```
+- docker desktop ```Docker version 27.0.3, build 7d4bcd8```
+- docker-compose ```Docker Compose version v2.28.1-desktop.1```
+- MacOS Sonoma 14.7
