@@ -211,8 +211,16 @@ docker-compose up -d ui_client
 Congratulations! your app is now running at http://localhost:8080/ and the  ui_client is running at http://localhost:3000/
 
 - add couple of comments from the client ui and verify them on the mouthful admin UI
+MOUTHFUL_APP:
+<img width="1727" alt="Screenshot 2024-10-08 at 2 02 44 PM" src="https://github.com/user-attachments/assets/8c9ac870-574d-4989-b98f-0e92006336f9">
+
+UI_CLIENT:
+<img width="1727" alt="Screenshot 2024-10-08 at 2 02 55 PM" src="https://github.com/user-attachments/assets/2ea5b623-9bc3-40f6-935a-01a77825ee2e">
 
 
+<img width="1728" alt="Screenshot 2024-10-08 at 2 04 50 PM" src="https://github.com/user-attachments/assets/cf124bc5-b18f-4f0c-ae56-67acc72b3b75">
+
+<img width="865" alt="Screenshot 2024-10-08 at 2 21 34 PM" src="https://github.com/user-attachments/assets/2857b5b2-fb35-42da-809f-ef27b9bd248d">
 
 
 # Migrating Mouthful app to Yugabyte
@@ -367,10 +375,14 @@ docker-compose up -d mouthful
 docker-compose up -d ui_client
 ```
 
-- check yugabyteD UI -> databases to see if the mouthful_db has the tables migrated
+- Optional: check yugabyteD UI -> databases to see if the mouthful_db has the tables migrated
+<img width="1726" alt="Screenshot 2024-10-08 at 2 21 07 PM" src="https://github.com/user-attachments/assets/f61032e4-4e2f-4272-9eb6-9cdb7623b0fd">
+<img width="1728" alt="Screenshot 2024-10-08 at 2 21 18 PM" src="https://github.com/user-attachments/assets/11c9e3dd-2c3f-4bb5-9a5b-aa207502e4cf">
 
 
 - create new comment to see the app is working as expected.
+<img width="1727" alt="Screenshot 2024-10-08 at 2 22 30 PM" src="https://github.com/user-attachments/assets/69326812-00d6-4212-b1ec-f5d4265238b1">
+<img width="1725" alt="Screenshot 2024-10-08 at 2 22 58 PM" src="https://github.com/user-attachments/assets/7fcee746-4df7-451b-8294-5d15eb7fc36c">
 
 - also create ysqlsh connection to the yugabyte db and check if the new comment/data is indeed going to the new database
 
