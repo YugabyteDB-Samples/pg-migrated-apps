@@ -16,15 +16,18 @@ docker-compose up -d
 
 2. App will be running on http://localhost:3000 . Here create some sites and destinations.
 
-![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/02f1a39b-7a2c-4155-a2b8-8c0eb936ba06)
+
 
 3. Here open a site and get the token for start sending data. Here I am attaching a site to my react app.
 
-![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/4f60e8fb-7cd9-4e73-b335-fce3328166bd)
+
 
 4. Here I am sending data to Jitsu using the react app.
 
-![alt text](image-3.png)
+![image](https://github.com/user-attachments/assets/2554b3e3-127c-4733-9554-573745add581)
+
 
 5. Add yugabyte to docker-compose.yml
 
