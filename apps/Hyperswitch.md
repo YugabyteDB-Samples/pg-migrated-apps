@@ -198,6 +198,25 @@ yb-voyager end migration --export-dir assess-dir --backup-log-files true \
 
 ## Congratulations! You have successfully migrated Hyperswitch app from PG to YB
 
+
+### Fresh install of the app on YugabyteDB
+Faced issue with the application's setup migration scripts. Relevant bug JIRA: https://yugabyte.atlassian.net/browse/DB-7005
+
+Issue can be reproduced with this sample sql script.
+
+```sql
+CREATE TABLE foo (bar int);
+insert into foo values(1);
+
+BEGIN;
+	ALTER TABLE foo ADD COLUMN country VARCHAR(255);
+
+	UPDATE foo set country = 'US';
+
+	ALTER TABLE foo ALTER COLUMN country SET NOT NULL; -- fails here with `ERROR:  column "country" contains null values`
+COMMIT;
+```
+
 ### Tools and versions
 - YugabyteDB docker image ```yugabytedb/yugabyte:2024.1.3.0-b105```
 - Yugabyte Voyager docker image ```yugabytedb/yb-voyager:1.8.3```
@@ -205,3 +224,5 @@ yb-voyager end migration --export-dir assess-dir --backup-log-files true \
 - docker desktop ```Docker version 27.0.3, build 7d4bcd8```
 - docker-compose ```Docker Compose version v2.28.1-desktop.1```
 - MacOS Sonoma 14.7
+
+
