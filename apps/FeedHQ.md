@@ -6,8 +6,8 @@ FeedHQ is a web-based feed reader
 
 # feedhq-pg-app-century
 Migrating Feedhq app from PG to YB with Voyager
-
-
+Refer to repo for local setup in mac m1. As we have to change some requirements for python to run on local M1. 
+https://github.com/yugabyte/feedhq-pg-app-century
 
 ## Tech & versions used
 - Docker
