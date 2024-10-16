@@ -27,7 +27,7 @@ NODE_ENV = "development"
 WEBSITE_URL = "http://localhost:3000"
 GOOGLE_API_KEY = ""
 REDIS_URL = "redis://localhost:6379"
-SENTRY_DSN = "https://74944494449444944494449444944494@o4505467242360832.ingest.us.sentry.io/4505467242360832"
+SENTRY_DSN = "http://localhost:3000"
 SHORT_LENGTH = 7
 SHORT_CHARS = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 ```
