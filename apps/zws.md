@@ -56,6 +56,8 @@ bun run dev
 ```
 
 7. Generate some short links and test
+![image](https://github.com/user-attachments/assets/69a8151d-bd99-4f4e-b5eb-0cf6101348f1)
+
 
 8. Run a yugabyte db instance using docker
 
