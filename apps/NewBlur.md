@@ -5,7 +5,7 @@ NewsBlur is a personal news reader that brings people together to talk about the
 [GitHub](https://github.com/samuelclay/NewsBlur)
 
 
-# Steps for Migration (verified on M1 Mac1
+# Steps for Migration (verified on M1 Mac1)
 1. Clone the repo and run the docker-compose file
 
 ```
