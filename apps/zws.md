@@ -4,7 +4,7 @@ Shorten URLs using invisible spaces
 
 [GitHub](https://github.com/zws-im/zws)
 
-# Steps for Migration (verified on M1 Mac1)
+# Steps for Migration
 
 1. Run postgres and redis using docker command
 
