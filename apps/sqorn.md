@@ -71,16 +71,13 @@ npm test
 
 5. If above step is successful then you can try sqorn library by adding some of the entries in that database. It is working fine for me.
 6. Attaching screenshots after running the tests.
-
+<img width="1724" alt="Screenshot 2024-10-18 at 12 39 40 PM" src="https://github.com/user-attachments/assets/3445cb70-71b2-4515-bcc0-68b3b6fd0342">
 7. Create directory for migration and for data.
 ```commandline
 rm -rf data
 mkdir -p data/yb_data
 mkdir assess-dir
 ```
-<img width="1724" alt="Screenshot 2024-10-18 at 12 39 40 PM" src="https://github.com/user-attachments/assets/3445cb70-71b2-4515-bcc0-68b3b6fd0342">
-
-
 
 ## Offline Migration using voyager 
 
