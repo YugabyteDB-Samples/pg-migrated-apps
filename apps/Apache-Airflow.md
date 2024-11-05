@@ -72,9 +72,9 @@ docker-compose up -d
 
 
 
-# Migrating Hyperswitch app to from PG to Yugabyte succeeded, however the app start has an issues(erros in app logs). Steps as follows. 
+# Migrating Airflow app to from PG to Yugabyte succeeded, however the app startup has an issues(erros in app logs). Steps as follows. 
 
-- replace contents of docker-compose.yml file with following(adds yugabyte service)
+- replace contents of ```docker-compose.yml``` file with following(adds yugabyte service)
 ```yml
 version: '3.8'
 
@@ -415,6 +415,7 @@ HINT:  See https://github.com/yugabyte/yugabyte-db/issues/3642. React with thumb
 
 ```
 
+### Issues and migration report files are also placed in shared google drive location here: https://drive.google.com/drive/u/0/folders/1m8n_4HsTbmFlC_nueIBHUwPaaPGZFe3x 
 
 ### Tools and versions
 - YugabyteDB docker image ```yugabytedb/yugabyte:2024.1.3.0-b105```
