@@ -375,7 +375,7 @@ CREATE USER airflow WITH PASSWORD 'airflow' SUPERUSER CREATEDB CREATEROLE;
 docker-compose up -d
 ```
 
-- The app start fails to start with logs showing errors related to advisory logs. Related issue: https://github.com/yugabyte/yugabyte-db/issues/3642  
+- The app start fails to start with logs showing errors related to advisory locks. Related issue: https://github.com/yugabyte/yugabyte-db/issues/3642  
 ```
 [2024-10-17T06:46:33.298+0000] {migration.py:216} INFO - Will assume transactional DDL.
 Traceback (most recent call last):
